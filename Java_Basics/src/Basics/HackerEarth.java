@@ -9,5 +9,5 @@ public static void main(String args [])
 {
 	List<String > Languages = Arrays.asList("Python" , "Java", "python"); 
 			Map<String, Integer> LanguagesLength = Languages. stream(). collect(Collectors. toMap(Function. identity(), String:: length)); 
-			System.out.println("list: " + Languages);
+			System.out.println("list: " + LanguagesLength);
 }}

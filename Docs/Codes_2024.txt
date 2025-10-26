@@ -1,0 +1,74 @@
+Write a program to find the index of “3” in a rotated array [6, 5, 4, 1, 2, 3]
+
+What is a pivot in a rotated array and how to find it?
+
+find first' position where sum of distances previous id equal to dum of distance next to it
+
+java code using multithreading in java for finding if a number is odd or even
+
+queue vs priority queue java
+
+Find first non-repeating sequence of given String 
+
+find count of repeating string in a word
+
+display hashmap key values
+
+find second largest element in array using java
+
+remove duplicate charecters using stream in java
+
+sort an integer using stream
+
+code to find largest non repeating sbstring in java
+
+find minimum number in a list using stream api 
+
+diff between map and flatmap in java
+
+object vs class in java
+
+how many ways we can create object
+
+3rd highest salary using Java 8
+
+find all mobile number starrting with +91 in stream api
+
+concatenate all string value in stream api
+
+There's a list with name id salary Use stream to remove duplicate stuff
+Write jaba code to show consumer and predictate using multithreading
+
+Write a java program to create list containing id name salary and remove duplicate salaries using java 8
+Program to cyclically rotate an array by one in java
+
+Employee 
+empId, empName, salary, deptId
+ Department 
+deptId, deptName, location
+ 
+java : get employee details whose salary is greater than 30000 in every department
+ 
+sql : get third highest salary in every department at every location
+
+use java 8
+
+find avg salary of employees in ava 8
+
+find avg salary of male and female in ava 8
+
+count females and males 
+
+check if all numbers are even yusing stream api
+
+find common item in two hashmap 
+
+reverse a list using stream api
+
+count frequency of a string in java
+
+Java program to find second largest number in array 
+
+remove duplicate elemnts from arraylist
+
+WRITE A CODE TO RETRIVE EMPLOYEE PHONE NUMBER USING STREAM API FOR EMP ID NAME AND PHONE NUMBER

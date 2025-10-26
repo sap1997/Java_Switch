@@ -7,7 +7,7 @@ public class Singleton_Class {
 	{
 		
 	}
-	public static Singleton_Class getobj()
+	public static  Singleton_Class getobj()
 	{
 		if(single_instance==null)
 		{

@@ -34,12 +34,12 @@ public class Employee   {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + "]";
 	}
-	public Employee(int id, String name, int salary,int age) {
+	public Employee(String string, int i, int salary,String string2) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.id = string;
+		this.name = i;
 		this.salary = salary;
-		this.age=age;
+		this.age=string2;
 	}
 	/* public int compareTo(Employee other) {
 	        return Integer.compare(this.salary, other.salary); // Sort by salary

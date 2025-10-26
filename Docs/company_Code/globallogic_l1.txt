@@ -1,0 +1,78 @@
+Product:-id,name,dom,expdate,mrp,type
+
+getproduct:- latestmanfacturedate, medicine ,name should be sorted order;
+
+
+String latestmanfacturedate = products.stream().sorted(Comparator.comparing(Product::getdom).reversed())
+				.findFirst();
+
+List<Products>finalresult = products.stream().filter(p->p.getdom().equals(latestmanfacturedate))
+				.filter(p->p.getType().equalsIgnoreCase("Medicine"))
+				.map(p->p.getName().toUpperCase()).
+				.sorted(Comparator.comparing(Product::getName))
+				.collect(Collectors.toList());
+
+
+
+
+
+@RestController
+public class RestControllers
+{
+@Autowired
+private UserService UserService;
+
+@GetMapping("/id/{id}")
+public @ResponseEntity getUserById(@RequestParam Long id)
+{
+	Optional<Employee> userdetails = UserService.getUserById(id);
+	if(userdetails.isPresent())
+	{
+	}
+}
+}
+@Service
+public class RestService
+{
+	@AutoWired
+	private EmployeeRepos empress
+
+	private empress.getUserById();
+
+	}
+
+@Repository
+public class EmployeeRepositry extends JPARepository
+{
+	@Query("Select * from Employee order by salary desc limit 1 offset 1")
+	private void secondhighest
+
+}
+
+@Entity
+public class Employee
+{
+	@Primary
+	int id;
+	@Coloumn(name="EmployeeNAme");
+	String name;
+	String address;
+  
+}
+
+
+Employee table:- second highest salary
+
+
+Select * from Employee order by salary desc limit 1 offset 1;
+
+Select * from Employee order by salary desc
+skip 1
+limit 1;
+
+
+
+
+
+
+

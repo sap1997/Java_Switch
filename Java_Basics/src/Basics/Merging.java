@@ -22,7 +22,7 @@ public class Merging {
 	            merge(array, left, mid, right);
 	        }
 	    }
-
+s1.equals(s2)
 	    public static void merge(int[] ar, int left, int mid, int right) {
 	    	int n1 = mid-left+1;
 	    	int n2 = right-mid;

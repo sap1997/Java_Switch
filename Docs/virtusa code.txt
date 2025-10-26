@@ -1,0 +1,79 @@
+import java.util.stream.Stream;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Stream.of("a", "b", "c", "d")
+
+            .peek(s -> System.out.println("peek: " + s))
+
+            .filter(s -> {
+
+                System.out.println("filter: " + s);
+
+                return s.compareTo("b") > 0;
+
+            })
+
+            .findFirst()
+
+            .ifPresent(s -> System.out.println("result: " + s));  
+
+    }
+}
+
+
+
+
+import java.util.*;
+
+public class Main {
+    static class Parent {
+        void test(Object o) { System.out.println("Parent Object"); }
+        void test(String s) { System.out.println("Parent String"); }
+    }
+    static class Child extends Parent {
+        void test(Object o) { System.out.println("Child Object"); }
+        void test(Integer i) { System.out.println("Child Integer"); }
+    }
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.test("hello"); //Parent String
+        p.test(42);      //Child Integer
+    }
+
+}
+ 
+
+
+
+
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<String> stringList = new ArrayList<>();
+
+        List<Integer> intList = new ArrayList<>();
+
+        System.out.println(stringList.getClass() == intList.getClass()); //false
+
+        System.out.println(stringList.getClass().getGenericSuperclass()); // java.lang
+
+    }
+
+}
+ 
+
+
+
+
+--LAZY LOADING
+--TRY CATCH
+---OVERLOADING & OVERRIDING
+---CORE JAVA TRICKY OUTPUT
+

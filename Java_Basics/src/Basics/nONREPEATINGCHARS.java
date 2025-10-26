@@ -1,6 +1,7 @@
 package Basics;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -19,6 +20,11 @@ public class nONREPEATINGCHARS {
 		String vow = "This is vowelcount";
 		Map<Character,Long> vowcount=vow.chars().mapToObj(c->(char)c).filter(c->"aeiou".indexOf(c)!=-1).collect(Collectors.groupingBy(c->c,Collectors.counting()));
 		System.out.println(vowcount);
+		
+		String nonrep = "apple";
+		Optional<Character> first = nonrep.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(n->n,Collectors.counting()))
+				.entrySet().stream().filter(n->n.getValue()>1).map(n->n.getKey()).findFirst();
+		System.out.println(first);
 		
 		
 	}

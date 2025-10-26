@@ -1,0 +1,4 @@
+Transaction:-customer_id,amount,status(success/failure);
+
+
+Select customer_id from transactions where count(status)>=3 AND status = 'SUCCESS' AND AMOUNT >=100

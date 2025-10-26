@@ -1,0 +1,48 @@
+//Find the second highest number in a list using streams.
+ 
+
+List<Integer> numbers = Arrays.asList(10,20,30,40,50,50);
+
+
+Optional<Integer> secondHighest = numbers.stream().sorted(Comparator.reverseOrder()).distinct().skip(1).findFirst();
+
+
+if(secondHighest.isPresent())
+	Sysout(secondHighest.get());
+
+
+//Partition a list of integers into even and odd numbers. 
+
+
+List<Integer> numbers = Arrays.asList(3,2,4,5,6,7);
+
+
+Map<Boolean,List<Integer>> oddeven = numbers.stream().collect(Collectors.partioningBy(n->n%2==0));
+
+
+Employee --- id,salary,name
+
+
+Select * from Employee order by salary desc offset 1 limit 1
+
+Select * from Employee where Max(Salary)<(Select Max(Salary) from Employee);
+
+
+
+Given a sales table with columns product_id, sale_date, and amount, write a query to find the total sales per product for the last 30 days.
+ 
+Select product_id, sum(amount) as total_sales from sales 
+where Sale_date between SYSDATE AND ToDate(Sysdate-30)
+group by product_id;
+
+
+
+Assume you have employees(emp_id, name, email_address,salary, dept_id) and departments(dept_id, dept_name).
+	Write a query to find duplicate email addresses in a users table.
+
+
+Select e.Name,e.email_address,d.dept_name from Employees e 
+inner join departments d on e.dept_id = d.dept_id
+WHERE e.email_address= (Select e2.email_address from employee e2 group by e.name);
+
+

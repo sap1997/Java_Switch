@@ -1,0 +1,75 @@
+User
+id	name 	salary		dep_id
+1	A		10000			1
+2	B		30000			1
+3	C		30000			null
+ 
+Department
+id		name
+1		ENG
+2		HR
+ 
+1. All user details whose salary is highest
+2. All user details with department
+
+
+1. SELECT * FROM EMPLOYEE WHERE SALARY = (SELECT MAX(SALARY) FROM USER);
+
+2. SELECT  U.*, D.NAME FROM USER U INNNER JOIN DEPARTMENT D ON U.DEPID = D.DEPID
+
+3.SELECT U.*, D.NAME FROM USER U LEFT JOIN DEPARTMENT D ON U.DEPID = D.ID;
+
+
+
+
+		User u1 = new User();
+		u1.setName("Java");
+		User u2 = new User();
+		u2.setName("Java");
+		HashSet<User> set = new HashSet<>();
+		set.add(u1);
+		set.add(u2);
+		System.out.println(set.size());//2
+
+
+User:- percentage,name,id;
+
+
+List<User>FilterByPercentage = user.stream().filter(e->e.getPercentage()>80).collect(Collectors.toList());
+
+
+
+
+
+
+class A { 
+	int a, b; 
+	A (int a, int b) {
+    	this.a = a;
+	    this.b = b;
+    	hello();
+	} 
+	public void hello() { 
+	    System.out.println(a+" "+b); 
+	} 
+} 
+ 
+class Main extends A {     
+	int c;
+    Main (int a, int b, int c){
+        super (a, b);
+        this.c = c;
+    }
+ public void hello () {
+        System.out.println (a+" "+b+" "+c);
+ }
+ public static void main (String args[]) {
+    A a = new Main(10,20,30);
+ }
+}
+
+//10 20 30
+//
+
+
+

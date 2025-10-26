@@ -1,0 +1,38 @@
+
+class Prime
+{
+  public static void main(String args[])
+{
+	public boolean isprime(int n)
+	{
+          for(int i=2;i<n/2;i++) 4
+	  {
+		if(n%i==0)
+		{
+			return false;
+		}
+	}
+	return true;
+	}
+
+	public static void main(String args[])
+	{
+		
+		List<Integer> primenumbers = new ArrayList<>();
+		primenumbers.add(1);
+		primenumbers.add(2); 
+		int n=3;
+		while(primenumbers.size<10)
+		{
+		   if(isprime(n)==true)
+		{
+			primenumbers.add(n);
+			n++;
+}
+		    else
+			n++;
+		}
+	System.out.println(primenumbers);
+	}
+}
+		

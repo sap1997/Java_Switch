@@ -1,0 +1,108 @@
+public class BookController
+{
+	
+	@AutoWired
+	private BookService bookService;
+
+   @GetMapping("BookDetails/{id}")
+   public ResponseEntity<Books> getBookById(@RequestParam Long Id)
+   {
+	List<Books> AddBook = new ArrayList<>();
+	Optional<Books> BooksById = bookService.getBookById(id);
+	if(BooksById.isPresent())
+	{
+		AddBook.add(BooksById.get());
+	}
+@ResponseStatus("MSGCODE =200"
+
+  
+  @PostMapping("NewBook/{book}");
+   public ResponsEntity<Books> AddBook(@ResponseBody Books book)
+    {
+	bookService.save(book);
+     }
+
+
+  @DeleteMapping("RemoveBook/{id}")
+    public ResponseEntity<Books> DeleteBookById(@RequestParam Long Id)
+	{
+		return bookService.deleteById(Id);
+	}
+
+    @PatchMapping("UpdateBookDetails/{id}")
+	public ResponseEntity<Books
+
+
+
+//Duplicate Records
+
+Delete from Accounts a where a.id IN (Select a2.id from accounts a2 where count(a2.id)>1 group by a2.id)
+
+Delete from Accounts a where a.name IN (Select a2.name from accounts where count
+
+
+
+public class HashMapImpl
+{
+   Object Key;
+   Object Value;
+   int Max =16;
+   List<Object> Store = new ArrayList<>();
+Object output;
+   
+   HashMapImpl(Object Key,Object Value)
+   {
+	this.Key = Key;
+	this.Value = Value;
+    }
+
+
+public int HashCode(Object Value)
+{
+	return Objects.hash(value);
+}
+public Boolean equals(Object o)
+{
+	if(o instanceof Value)
+	   return true;
+        else if(o==null)
+		return false;
+        else
+	{
+		Object o = new Object(Value)
+	      return o.equals(Value);
+	}
+}
+public void put(Key,Value)
+{
+	int hash = Hashcode(Value);
+        int index = hash%10;
+	List<Object> contains = new ArrayList<>();
+	contains.add(hash);
+	contains.add(index);
+	contains.add(key);
+	contains.add(value);
+
+	Store.add(index,contains);
+
+	if(key==null)
+		Store.add(0,contains);
+	if(contains.size(10))
+	{
+		Max+=
+	
+    }
+
+public void get(Key)
+{
+	if(key==null)
+		output = Store.get(0);
+       else
+	for(Object i : Store)
+	{
+		if(i.equals(Key))
+		  output = Store.get()
+}	
+}
+	
+  
